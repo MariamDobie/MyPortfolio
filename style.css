@@ -1,0 +1,24 @@
+body {
+  background-color:rgb(17, 17, 37);
+  /* background grid lines */
+  background-image:
+    /* horizontal lines */
+    linear-gradient(#11112515 1px, transparent 1px),
+    /* vertical lines */
+    linear-gradient(90deg, #11112515 1px, transparent 1px),
+    radial-gradient(circle at center,rgba(50, 100, 255, 0.3) 0%,rgb(17, 17, 37) 80%);
+  /* size of each cell */
+  background-size: 25px 25px, 25px 25px, cover;
+  /* font color */
+  color: rgb(182, 197, 209);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+#socials-icons img{
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+

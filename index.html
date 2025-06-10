@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name ="viewport" content="width=device-width, inital-scale=1.0" />
+    <title>Mariam Dobie - Portfolio</title>
+    <link href = "style.css" rel="stylesheet"/>
+</head>
+<body class="home-page">
+    <!--Header and nav Section-->
+    <header>
+        <h1>Mariam Dobie</h1>
+        <nav>
+            <a href="#about"> About</a>
+            <a href="#projects"> Projects</a>
+            <a href="#skills"> Skills</a>
+            <a href="#contact"> Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!--About Section-->
+        <section id="about">
+            <p>A Computer Science Major @ Hunter College CUNY & Aspiring Software Engineer (’27)</p>
+        </section>
+
+        <!--Projects Section-->
+        <section id="projects">
+            <h2>Projects</h2> 
+            
+            <!--Planet Over Profit Section-->
+            <article class="project">
+                <h3>Planet Over Profit</h3>
+                <p>Group Porject: Mapbox + API intergration.</p>
+                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank" rel="noopener noreferrer">View Code</a>
+                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank">Run Demo</a>
+            </article>
+
+            <!-- Calorie React app -->
+            <article class="project">
+                <h3>TrackBite</h3> 
+                <p>React app for saving & re-using meals—built a MealLogger component with localStorage, hourly pop-up reminders, and a clean dashboard.</p>
+                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank" rel="noopener noreferrer">View Code</a>
+                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank">Run Demo</a>
+            </article>
+
+            <!-- Solo C++ Game -->
+            <article class="project">
+                <h3>Hugman</h3> 
+                <p>Built in VS Code with file I/O, random word selection, error handling, and hint logic to deliver a polished command-line experience.</p>
+                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_bank" rel="noopener noreferrer">View Code</a>
+                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_bank">Run Demo</a>
+            </article>
+        </section>
+
+        <!--Skills Section-->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5 • CSS • JavaScript (ES6+)</li>
+                <li>React.js</li>
+                <li>Java • Python • C++</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <!--Socials Section-->
+        <section id="socials-icons">
+            <a href="mailto:mariamdobie@gmail.com" title="Email"> 
+                <img src="icons/email.png" alt="Email icon"> 
+            </a>
+            <a href="https://www.linkedin.com/in/mariamdobie" title="Linkedin" target="_blank" rel="noopener noreferrer"> 
+                <img src="icons/linkedin.png.webp" alt="Linkedin icon">
+            </a>
+            <a href="https://github.com/MariamDobie" title="Github" target="_blank" rel="noopener noreferrer">
+                <img src="icons/Github.png" alt="Github icon">
+            </a>
+        </section>
+
+        <!--Contact Section-->
+        <section id="contact">
+            <h1>Get in Touch</h1>
+            <form class="contact-form">
+                <!--Name Field-->
+                <div class="input-group">
+                    <span class="icon">👤</span>
+                    <input type="text" placeholder="Your Name"/>
+                </div>
+                <!--Email Field -->
+                <div class="input-group">
+                    <span class="icon">✉️</span>
+                    <input type="text" placeholder="Your Email"/>
+                </div>
+                <!--Message Field-->
+                <div class="input-group">
+                    <span class="icon">💬</span>
+                    <textarea placeholder="Your Message"></textarea>
+                </div>
+                <!--Submit Button-->
+                <button type="sumbit" class="btn-send">
+                    <span class="icon">✈️</span> Send Message
+                </button>
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>
