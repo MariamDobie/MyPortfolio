@@ -14,11 +14,20 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
 }
+#socials-icons {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  gap: 0.5rem;
+}
 
 #socials-icons img{
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     display: block;
 }
+
+
 
 
