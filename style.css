@@ -1,36 +1,142 @@
 body {
-  background-color:rgb(17, 17, 37);
-  /* background grid lines */
-  background-image:
-    /* horizontal lines */
-    linear-gradient(#11112515 1px, transparent 1px),
-    /* vertical lines */
-    linear-gradient(90deg, #11112509 1px, transparent 1px),
-    radial-gradient(circle at center,rgba(50, 100, 255, 0.3) 0%,rgb(17, 17, 37) 80%);
-  /* size of each cell */
-  background-size: 25px 25px, 25px 25px, cover;
-  /* font color */
-  color: rgb(182, 197, 209);
-  background-repeat: repeat;
-  background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #9ab2da 100%);
+    background-attachment: fixed;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-#socials-icons {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  display: flex;
-  gap: 0.5rem;
+
+header {
+    display: flex;
+    justify-content:space-between;
+    margin-top: 1.5%;
+}
+
+.logo {
+    font-size: x-large;
+}
+
+.logo a,
+.nav-links a {
+    text-decoration: none;
+    color:#000000;
+}
+
+.nav-links {
+    margin-top: 1%;
+    display: flex; /* is REQUIRED for gap to work */
+    gap: 45px;    /* this does not add space between items without flex/grid */
+    font-size: 19px;
+}
+
+.nav-links a:hover {
+    color: #355c62db;
+    text-decoration: overline;
+    font-weight: 599;
+}
+
+.header-socials img {
+    width: 40px;
+    height: 40px;
+}
+
+/* END OF HEADER STYLE.CSS */
+
+/* START OF INTRO SECTION */
+
+#intro{
+    min-height: 70vh;
+    display: flex; /* container is now a "flexbox"...the properties are below*/
+    justify-content: center; /*  focuses on the horizontal axis (aligns items and can add space-between and around items)*/
+    align-items: center; /*  aligns items on the vertical axis (flex-end, flex-start, center...) */
+    text-align: center; /*  focuses on text alignment -> it centers text in the middle of container. */
+    padding: 2rem; /* <-- not a flex-propety */
+}
+
+.intro-container{
+    display:flex;
+    align-items:center;
+    gap:400px; /* space between the image and the text on home page*/
+    max-width:2000px;
+}
+
+.portfolio-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-image img {
+  width: 300px;       /* Set desired width */
+  height: 300px;      /* Set desired height */
+  object-fit: cover;  /* Crops to fill the space (like background-size: cover) */
+  object-position: 50% 95%; /* Focus on 50% from left, 30% from top */
+  border-radius: 50%;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    margin-bottom: 0rem;
+    color: #555;
+}
+
+.name {
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0; /* Removes space around the text */
+    color: #355c62db;
+}
+
+.highlight {
+  color:#355c62db;
+}
+
+.about-title{
+    text-decoration: underline;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1.3rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration:none;
+}
+
+/* ABOUT ME SECTION */
+#about{
+}
+
+.about-container{
+    
+}
+.about-title{
+
+}
+
+.about-content{
+    margin-left: 100%;
 }
 
 #socials-icons img{
     width: 50px;
     height: 50px;
-    display: block;
+    display:flex;
 }
 
+/* submit icon */
 #contact img{
     width: 20px;
     height: 20px;
+    position: absolute;
+    right: 0%;
 }
-
-

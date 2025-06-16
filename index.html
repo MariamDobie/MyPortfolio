@@ -3,24 +3,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name ="viewport" content="width=device-width, inital-scale=1.0" />
-    <title>Mariam Dobie - Portfolio</title>
+    <title>Mariam Dob - Portfolio</title>
     <link href = "style.css" rel="stylesheet"/>
 </head>
 <body class="home-page">
-    <!--Header and nav Section-->
+    <!--Header and socials-->
     <header>
-        <h1>Mariam Dobie</h1>
-        <nav>
-            <a href="#about"> About</a>
-            <a href="#projects"> Projects</a>
-            <a href="#skills"> Skills</a>
-            <a href="#contact"> Contact</a>
-        </nav>
+        <div class="logo">
+            <a href="#about"> Mariam Dobie</a>
+        </div>
+        <div class="header-socials">
+            <a href="mailto:mariamdobie@gmail.com"><img src="icons/mail.png" alt="Email icon"></a>
+            <a href="https://www.linkedin.com/in/mariamdobie" target="_blank" rel="noopener noreferrer"> <img src="icons/linkedin.png.webp" alt="Linkedin icon"></a>
+            <a href="https://github.com/MariamDobie" target="_blank" rel="noopener noreferrer"><img src="icons/git.png" alt="Github icon"></a>
+        </div>
     </header>
+    <nav class="nav-links">
+        <a href="#about"> About</a>
+        <a href="#projects"> Projects</a>
+        <a href="#skills"> Skills</a>
+        <a href="#contact"> Contact</a>
+    </nav>
+
     <main>
+        <!--Intro Section-->
+        <section id="intro">
+            <div class="intro-container">
+                <div class="intro-content">
+                    <h1 class="greeting">Hello, I'm <br>  
+                    <h1 class="name">Mariam Dobie</h1>
+                    <h3 class="title"><span class="highlight"> A Computer Science Student</span></h3>
+                    <div class="hero-buttons">
+                        <a href="assets/resume.pdf" target="_bank" class="btn btn-primary">View Resume</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!--About Section-->
         <section id="about">
-            <p>A Computer Science Major @ Hunter College CUNY & Aspiring Software Engineer (’27)</p>
+            <div class="about-container">
+                <h2 class=about-title>About Me</h2>
+                <div class="about-content"></div>
+                    <p>I'm an aspiring software engineer, <br> & currently a 3rd-yeard student @ Hunter College of CUNY ('27), majoring in a Bachelor's degree in Computer Science.</p>
+                    <p>I build small digital solutions focused on user satisfaction and engagement. I'm Passionate about creating projects that solve real-world problems through clean, efficient code.<a href="#projects" class="btn btn-secondary">View Work</a></p>
+                </div>
+                <div class="portfolio-image">
+                    <img src= "assets/portrait.jpg" alt="portrait">
+                </div>
+            </div>
         </section>
 
         <!--Projects Section-->
@@ -44,7 +76,7 @@
             </article>
 
             <!-- Solo C++ Game -->
-            <article class="project">
+            <article class="projects">
                 <h3>Hugman</h3> 
                 <p>Built in VS Code with file I/O, random word selection, error handling, and hint logic to deliver a polished command-line experience.</p>
                 <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_bank" rel="noopener noreferrer">View Code</a>
@@ -61,20 +93,7 @@
                 <li>Java • Python • C++</li>
                 <li>Git & GitHub</li>
             </ul>
-        </section>
-
-        <!--Socials Section-->
-        <section id="socials-icons">
-            <a href="mailto:mariamdobie@gmail.com" title="Email"> 
-                <img src="icons/mail.png" alt="Email icon"> 
-            </a>
-            <a href="https://www.linkedin.com/in/mariamdobie" title="Linkedin" target="_blank" rel="noopener noreferrer"> 
-                <img src="icons/linkedin.png.webp" alt="Linkedin icon">
-            </a>
-            <a href="https://github.com/MariamDobie" title="Github" target="_blank" rel="noopener noreferrer">
-                <img src="icons/git.png" alt="Github icon">
-            </a>
-        </section>
+        </section>    
 
         <!--Contact Section-->
         <section id="contact">
@@ -101,6 +120,18 @@
             </form>
         </section>
 
+        <!--Socials Section-->
+        <section id="socials-icons">
+            <a href="mailto:mariamdobie@gmail.com" title="Email"> 
+                <img class="email-icon" src="icons/mail.png" alt="Email icon"> 
+            </a>
+            <a href="https://www.linkedin.com/in/mariamdobie" title="Linkedin" target="_blank" rel="noopener noreferrer"> 
+                <img class="linkedin-icon" src="icons/linkedin.png.webp" alt="Linkedin icon">
+            </a>
+            <a href="https://github.com/MariamDobie" title="Github" target="_blank" rel="noopener noreferrer">
+                <img class="github-icon" src="icons/git.png" alt="Github icon">
+            </a>
+        </section>
     </main>
 </body>
 </html>
