@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name ="viewport" content="width=device-width, inital-scale=1.0" />
-    <title>Mariam Dob - Portfolio</title>
+    <title>Mariam Dobie - Portfolio</title>
     <link href = "style.css" rel="stylesheet"/>
 </head>
 <body class="home-page">
     <!--Header and socials-->
     <header>
         <div class="logo">
-            <a href="#about"> Mariam Dobie</a>
+            <a href="#intro"> Mariam Dobie</a>
         </div>
         <div class="header-socials">
             <a href="mailto:mariamdobie@gmail.com"><img src="icons/mail.png" alt="Email icon"></a>
@@ -34,8 +34,8 @@
                     <h1 class="name">Mariam Dobie</h1>
                     <h3 class="title"><span class="highlight"> A Computer Science Student</span></h3>
                     <div class="hero-buttons">
-                        <a href="assets/resume.pdf" target="_bank" class="btn btn-primary">View Resume</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="assets/resume.pdf" target="_bank" class="btn resume-btn">View Resume</a>
+                        <a href="#contact" class="btn contact-btn">Contact Me</a>
                     </div>
                 </div>
             </div>
@@ -43,45 +43,49 @@
 
         <!--About Section-->
         <section id="about">
-            <div class="about-container">
-                <h2 class=about-title>About Me</h2>
-                <div class="about-content"></div>
-                    <p>I'm an aspiring software engineer, <br> & currently a 3rd-yeard student @ Hunter College of CUNY ('27), majoring in a Bachelor's degree in Computer Science.</p>
-                    <p>I build small digital solutions focused on user satisfaction and engagement. I'm Passionate about creating projects that solve real-world problems through clean, efficient code.<a href="#projects" class="btn btn-secondary">View Work</a></p>
-                </div>
-                <div class="portfolio-image">
-                    <img src= "assets/portrait.jpg" alt="portrait">
-                </div>
+        <div class="about-container">
+            <h2 class="about-title">About Me</h2>
+            <div class="about-content">
+            <p class="about-text">
+                I’m an aspiring Software Engineer,  
+                & currently a 3rd-year student @ Hunter College of CUNY ('27), majoring in Computer Science.  
+                I build small digital solutions focused on user satisfaction and engagement.  
+                I’m passionate about creating projects that solve real-world problems through clean, efficient code. 
+                <a href="#projects" class="btn-secondary">View work here!</a> <!--Writing class="btn ..." atuo converts the link to a button-->
+            </p>
+            <img class="portfolio-image" src="assets/portrait.jpg" alt="portrait">
             </div>
+        </div>
         </section>
 
         <!--Projects Section-->
         <section id="projects">
-            <h2>Projects</h2> 
-            
+            <h2 class = "projects-title">Projects</h2> 
+            <div class= "projects-container">
             <!--Planet Over Profit Section-->
-            <article class="project">
+            <article id="planet-over-profit" class="project">
                 <h3>Planet Over Profit</h3>
-                <p>Group Porject: Mapbox + API intergration.</p>
-                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank" rel="noopener noreferrer">View Code</a>
-                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank">Run Demo</a>
+                <p>A Hackathon group project at HunterHacks using the Mapbox API to reveal NYC park funding gaps and provide volunteer opportunities.</p>
+                <a href="https://github.com/FahmidaA0/national-parks.git" target="_blank" rel="noopener noreferrer">View Code</a>
+                <a href="https://planet-over-profit.vercel.app/" target="_blank">Run Demo</a>
             </article>
 
             <!-- Calorie React app -->
-            <article class="project">
+            <!-- <article class="project">
                 <h3>TrackBite</h3> 
                 <p>React app for saving & re-using meals—built a MealLogger component with localStorage, hourly pop-up reminders, and a clean dashboard.</p>
                 <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank" rel="noopener noreferrer">View Code</a>
                 <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank">Run Demo</a>
-            </article>
+            </article> -->
 
             <!-- Solo C++ Game -->
-            <article class="projects">
-                <h3>Hugman</h3> 
+            <article id="hangman-cpp" class="project">
+                <h3>Hugman (C++)</h3> 
                 <p>Built in VS Code with file I/O, random word selection, error handling, and hint logic to deliver a polished command-line experience.</p>
-                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_bank" rel="noopener noreferrer">View Code</a>
-                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_bank">Run Demo</a>
+                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_blank" rel="noopener noreferrer">View Code</a>
+                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_blank">Run Demo</a>
             </article>
+            </div>
         </section>
 
         <!--Skills Section-->

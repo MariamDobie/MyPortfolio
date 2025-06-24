@@ -2,7 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #9ab2da 100%);
     background-attachment: fixed;
-    margin-left: 10%;
+    margin-left: 9%;
     margin-right: 10%;
 }
 
@@ -13,7 +13,7 @@ header {
 }
 
 .logo {
-    font-size: x-large;
+    font-size: 28px;
 }
 
 .logo a,
@@ -23,10 +23,10 @@ header {
 }
 
 .nav-links {
-    margin-top: 1%;
+    margin-top: 0.5%;
     display: flex; /* is REQUIRED for gap to work */
-    gap: 45px;    /* this does not add space between items without flex/grid */
-    font-size: 19px;
+    gap: 45px;    /* without "display:flex"..."gap" does not add space between items */
+    font-size: 20px;
 }
 
 .nav-links a:hover {
@@ -36,16 +36,19 @@ header {
 }
 
 .header-socials img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+    
 }
-
-/* END OF HEADER STYLE.CSS */
+.header-socials img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+/* END OF HEADER*/
 
 /* START OF INTRO SECTION */
-
 #intro{
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex; /* container is now a "flexbox"...the properties are below*/
     justify-content: center; /*  focuses on the horizontal axis (aligns items and can add space-between and around items)*/
     align-items: center; /*  aligns items on the vertical axis (flex-end, flex-start, center...) */
@@ -100,32 +103,117 @@ header {
     text-decoration: underline;
 }
 
+
+/* Intro/home section - Button Styles */
 .hero-buttons {
     display: flex;
-    justify-content: center;
+    gap: 1rem; /* Space between buttons */
+    margin: 1.5rem;
 }
 
 .btn {
-    padding: 1.3rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    text-decoration:none;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    justify-items: center;
+}
+
+.resume-btn {
+    background-color: #355c62db; /* Your accent color */
+    color: white;
+}
+
+.contact-btn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid #355c62db;
+}
+
+/* Hover Effects */
+.btn:hover {
+    /* transform: translateY(-2px); Focuses on moving on the Y-axis, while translateX focus on the X-axis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.224);
+}
+
+.resume-btn:hover {
+    background-color: #2a4a4f;
+}
+
+.contact-btn:hover {
+    background-color: #f0f8ff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 10px 20px;
+    }
 }
 
 /* ABOUT ME SECTION */
 #about{
+    padding: 4rem 2rem;
+    background-color: #ffffff63;
+    border-radius: 5%;
 }
 
 .about-container{
-    
+    max-width: 1200px;
+    margin: 2%;
 }
+
 .about-title{
-
+    display: flex;
+    font-size: 2.1rem;
+    margin-bottom: 3rem;
+    color:black;
+    position: relative;
+    text-decoration: overline;
 }
 
-.about-content{
-    margin-left: 100%;
+.about-content {
+    display: flex;                  /* enable flexbox */
+    align-items: center;            /* vertical centering */
+    justify-content: space-between; /* push text (first child) left, image (last child) right */
+    gap: 2rem;                      /* optional spacing */
+    flex-wrap: wrap;                /* allow wrap on very small screens */
 }
+
+.about-text {
+  flex: 1 1 300px;   /* grow/shrink, base width 300px */
+  max-width: 600px;  /* cap how wide the text can get */
+  line-height: 1.7;
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+.portfolio-image {
+  flex: 0 0 auto;    /* don’t stretch or shrink */
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 95%;
+}
+
+.btn-secondary{
+    color: #208f9ce4;
+    text-decoration: none;
+}
+
+.btn-secondary:hover{
+    color: #a1bbbee4;
+}
+
 
 #socials-icons img{
     width: 50px;
@@ -140,3 +228,64 @@ header {
     position: absolute;
     right: 0%;
 }
+
+
+/* PROJECT SECTION */
+#projects{
+    margin: 5%;
+    margin-top: 15%;
+    justify-items: center;
+}
+
+.projects-title{
+    font-size: 2.1rem;
+    text-decoration: underline;
+}
+
+.projects-container{
+    margin-top: 10%;
+    display: flex;
+    gap: 5rem;
+    justify-content: space-around;
+}
+
+/* Containers */
+.project{
+    background-color:#ffffff ;
+    width: 100%;
+    color:#2a4a4fd0;
+    border-radius: 0.5rem;
+    justify-items: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.project:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 3px 6px #0000005d;    
+}
+
+/* project Buttons */
+.project a{ 
+    display:inline-block;
+    margin-right: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    background-color: #52676aff;
+    color:#f0f8ff;
+    font-size: 0.9rem;
+}
+
+.project a:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .project {
+    flex: 1 1 100%;            /* full-width cards on small screens */
+    max-width: 100%;
+  }
+}
+
