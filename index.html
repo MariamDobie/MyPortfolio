@@ -10,26 +10,26 @@
     <!--Header and socials-->
     <header>
         <div class="logo">
-            <a href="#intro"> Mariam Dobie</a>
+            <a href="#home"> Mariam Dobie</a>
         </div>
         <div class="header-socials">
             <a href="mailto:mariamdobie@gmail.com"><img src="icons/mail.png" alt="Email icon"></a>
-            <a href="https://www.linkedin.com/in/mariamdobie" target="_blank" rel="noopener noreferrer"> <img src="icons/linkedin.png.webp" alt="Linkedin icon"></a>
-            <a href="https://github.com/MariamDobie" target="_blank" rel="noopener noreferrer"><img src="icons/git.png" alt="Github icon"></a>
+            <a href="https://www.linkedin.com/in/mariamdobie" target="_blank" rel="noopener noreferrer"> <img src="icons/linkedin.png" alt="Linkedin icon"></a>
+            <a href="https://github.com/MariamDobie" target="_blank" rel="noopener noreferrer"><img src="icons/github.png" alt="Github icon"></a>
         </div>
     </header>
     <nav class="nav-links">
+        <a href="#home">Home</a>
         <a href="#about"> About</a>
         <a href="#projects"> Projects</a>
-        <a href="#skills"> Skills</a>
         <a href="#contact"> Contact</a>
     </nav>
 
     <main>
-        <!--Intro Section-->
-        <section id="intro">
-            <div class="intro-container">
-                <div class="intro-content">
+        <!--Home Section-->
+        <section id="home">
+            <div class="home-container">
+                <div class="home-content">
                     <h1 class="greeting">Hello, I'm <br>  
                     <h1 class="name">Mariam Dobie</h1>
                     <h3 class="title"><span class="highlight"> A Computer Science Student</span></h3>
@@ -51,16 +51,29 @@
                 & currently a 3rd-year student @ Hunter College of CUNY ('27), majoring in Computer Science.  
                 I build small digital solutions focused on user satisfaction and engagement.  
                 I’m passionate about creating projects that solve real-world problems through clean, efficient code. 
-                <a href="#projects" class="btn-secondary">View work here!</a> <!--Writing class="btn ..." atuo converts the link to a button-->
-            </p>
+                <a href="#projects" class="btn-secondary">View Projects.</a> <!--Writing class="btn ..." atuo converts the link to a button-->
+            </p> 
             <img class="portfolio-image" src="assets/portrait.jpg" alt="portrait">
+            </div>
+            <div class="skill-section">
+                <p class="skill-intro">Here are some languages & technologies I have been working with:
+                    <ul class="skill-list">
+                        <li class="skill">HTML5</li>
+                        <li class="skill">CSS</li>
+                        <li class="skill">JavaScript (ES6+)</li>
+                        <li class="skill">Java</li>
+                        <li class="skill">Python</li>
+                        <li class="skill">C++</li>
+                        <li class="skill">Git & Github</li>
+                    </ul>
+                </p>
             </div>
         </div>
         </section>
 
         <!--Projects Section-->
         <section id="projects">
-            <h2 class = "projects-title">Projects</h2> 
+            <h2 class = "projects-title">My Projects</h2> 
             <div class= "projects-container">
             <!--Planet Over Profit Section-->
             <article id="planet-over-profit" class="project">
@@ -88,20 +101,10 @@
             </div>
         </section>
 
-        <!--Skills Section-->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5 • CSS • JavaScript (ES6+)</li>
-                <li>React.js</li>
-                <li>Java • Python • C++</li>
-                <li>Git & GitHub</li>
-            </ul>
-        </section>    
-
         <!--Contact Section-->
         <section id="contact">
-            <h1>Get in Touch</h1>
+            <div class="contact-container">
+            <h1 class="contact-title"> Get in Touch</h1>
             <form class="contact-form">
                 <!--Name Field-->
                 <div class="input-group">
@@ -115,27 +118,27 @@
                 </div>
                 <!--Message Field-->
                 <div class="input-group">
-                    <span class="icon">💬</span>
                     <textarea placeholder="Your Message"></textarea>
                 </div>
                 <!--Submit Button-->
-                <img src="icons/submit.png" alt="submit icon"> 
-                <button type="sumbit" class="btn-send"> Send Message </button>
+                <button type="sumbit" class="btn-send"> <img src="icons/submit.png" alt="submit icon"> Send Message </button>
             </form>
-        </section>
 
         <!--Socials Section-->
-        <section id="socials-icons">
-            <a href="mailto:mariamdobie@gmail.com" title="Email"> 
-                <img class="email-icon" src="icons/mail.png" alt="Email icon"> 
-            </a>
-            <a href="https://www.linkedin.com/in/mariamdobie" title="Linkedin" target="_blank" rel="noopener noreferrer"> 
-                <img class="linkedin-icon" src="icons/linkedin.png.webp" alt="Linkedin icon">
-            </a>
-            <a href="https://github.com/MariamDobie" title="Github" target="_blank" rel="noopener noreferrer">
-                <img class="github-icon" src="icons/git.png" alt="Github icon">
-            </a>
+                <div class="social-connect">
+                    <h3 class="social-title"> Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mariamdobie" title="Linkedin" target="_blank" rel="noopener noreferrer"> 
+                            <img class="linkedin-icon" src="icons/linkedin2.png" alt="Linkedin icon">
+                        </a>
+                        <a href="https://github.com/MariamDobie" title="Github" target="_blank" rel="noopener noreferrer">
+                            <img class="github-icon" src="icons/github2.png" alt="Github icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
+
     </main>
 </body>
 </html>
