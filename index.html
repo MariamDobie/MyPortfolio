@@ -1,151 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name ="viewport" content="width=device-width, inital-scale=1.0" />
-    <title>Mariam Dobie - Portfolio</title>
-    <link href = "style.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Mariam Dobie | Software Engineer</title>
+
+  <!-- Tailwind CDN (limited use, mostly for layout helpers) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts for cleaner typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Google Fonts for cleaner typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+  <style>
+    .skill-badge {
+      transition: all 0.2s ease;
+    }
+    .skill-badge:hover {
+      transform: translateY(-2px);
+    }
+    .contact-side-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .contact-side-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+    html {
+      scroll-padding-top: 90px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+    .exp-title-group {
+      flex: 1;
+    }
+    .exp-role {
+      font-size: 17px;
+      font-weight: 600;
+      color: #0f172a;
+      letter-spacing: -0.2px;
+      margin-bottom: 4px;
+    }
+    .exp-company {
+      font-size: 14px;
+      color: #475569;
+      font-weight: 500;
+      margin: 0;
+    }
+    .exp-date {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 400;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .exp-description {
+      margin-top: 8px;
+      padding-left: 0;
+      list-style-type: none;
+    }
+    .exp-description li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.55;
+    }
+    .exp-description li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      color: #0f172a;
+      font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      .exp-header {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .exp-date {
+        white-space: normal;
+      }
+    }
+  </style>
 </head>
-<body class="home-page">
-    <!--Header and socials-->
-    <header>
-        <div class="logo">
-            <a href="#home"> Mariam Dobie</a>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <h1 class="logo">Mariam Dobie</h1>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="container hero">
+    <div class="hero-layout">
+      <!-- LEFT: TEXT with vertical line -->
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Software Engineer building clean, user-focused applications
+        </h1>
+
+        <p class="hero-subtext">
+          Computer Science student at Hunter College focused on developing scalable web applications and practical software solutions.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="assets/resume.pdf" target="_blank" class="btn-primary">
+            View Resume
+          </a>
+
+          <a href="#contact" class="btn-secondary">
+            Contact
+          </a>
         </div>
-        <div class="header-socials">
-            <a href="mailto:mariamdobie@gmail.com"><img src="icons/mail.png" alt="Email icon"></a>
-            <a href="https://www.linkedin.com/in/mariamdobie" target="_blank" rel="noopener noreferrer"> <img src="icons/linkedin.png" alt="Linkedin icon"></a>
-            <a href="https://github.com/MariamDobie" target="_blank" rel="noopener noreferrer"><img src="icons/github.png" alt="Github icon"></a>
+      </div>
+
+      <!-- RIGHT: IMAGE -->
+      <div class="hero-image-wrapper">
+        <img src="assets/portrait.jpg" alt="Mariam Dobie" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + SKILLS -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+
+      <div class="about-flex">
+        <div class="about-text">
+          <p class="section-text">
+            I'm a Software Engineer and Computer Science student at Hunter College of CUNY. I build applications with a focus on clarity, performance, and usability. My work spans front-end interfaces, backend logic, and problem-solving through code.
+          </p>
         </div>
-    </header>
-    <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about"> About</a>
-        <a href="#projects"> Projects</a>
-        <a href="#contact"> Contact</a>
-    </nav>
-    
-    <main>
-        <!--Home Section-->
-        <section id="home">
-            <div class="home-container">
-                <div class="home-content">
-                    <h1 class="greeting">Hello, I'm <br>  
-                    <h1 class="name">Mariam Dobie</h1>
-                    <h3 class="title"><span class="highlight"> A Computer Science Student</span></h3>
-                    <div class="hero-buttons">
-                        <a href="assets/resume.pdf" target="_bank" class="btn resume-btn">View Resume</a>
-                        <a href="#contact" class="btn contact-btn">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!--About Section-->
-        <section id="about">
-        <div class="about-container">
-            <h2 class="about-title">About Me</h2>
-            <div class="about-content">
-            <p class="about-text">
-                I’m an aspiring Software Engineer,  
-                & currently a 3rd-year student @ Hunter College of CUNY ('27), majoring in Computer Science.  
-                I build small digital solutions focused on user satisfaction and engagement.  
-                I’m passionate about creating projects that solve real-world problems through clean, efficient code. 
-                <a href="#projects" class="btn-secondary">View Projects.</a> <!--Writing class="btn ..." atuo converts the link to a button-->
-            </p> 
-            <img class="portfolio-image" src="assets/portrait.jpg" alt="portrait">
-            </div>
-            <div class="skill-section">
-                <p class="skill-intro">Here are some languages & technologies I have been working with:
-                    <ul class="skill-list">
-                        <li class="skill">HTML5</li>
-                        <li class="skill">CSS</li>
-                        <li class="skill">JavaScript (ES6+)</li>
-                        <li class="skill">Java</li>
-                        <li class="skill">Python</li>
-                        <li class="skill">C++</li>
-                        <li class="skill">React.js</li>
-                        <li class="skill">Git & Github</li>
-                    </ul>
-                </p>
-            </div>
+        <!-- Interactive skills section -->
+        <div class="skills-wrapper">
+          <p class="skills-heading">Languages & technologies</p>
+          <div class="skill-list">
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript (ES6+)</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">React.js</span>
+            <span class="skill-badge">Git & GitHub</span>
+          </div>
         </div>
-        </section>
+      </div>
+    </div>
+  </section>
 
-        <!--Projects Section-->
-        <section id="projects">
-            <h2 class = "projects-title">My Projects</h2> 
-            <div class= "projects-container">
-            <!--Planet Over Profit Section-->
-            <article id="planet-over-profit" class="project">
-                <h3>Planet Over Profit</h3>
-                <p>A Hackathon group project at HunterHacks using the Mapbox API to reveal NYC park funding gaps and provide volunteer opportunities.</p>
-                <a href="https://github.com/FahmidaA0/national-parks.git" target="_blank" rel="noopener noreferrer">View Code</a>
-                <a href="https://planet-over-profit.vercel.app/" target="_blank">Run Demo</a>
-            </article>
+  <!-- PROJECTS (clean grid, modern cards) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
 
-            <!-- Calorie React app -->
-            <!-- <article class="project">
-                <h3>TrackBite</h3> 
-                <p>React app for saving & re-using meals—built a MealLogger component with localStorage, hourly pop-up reminders, and a clean dashboard.</p>
-                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank" rel="noopener noreferrer">View Code</a>
-                <a href="https://github.com/FahmidaA0/national-parks.git" target="_bank">Run Demo</a>
-            </article> -->
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3 class="project-title">Planet Over Profit</h3>
+          <p class="project-desc">
+            Map-based application highlighting NYC park funding gaps using real data & volunteer opportunities.
+          </p>
+          <p class="project-tech">JavaScript • Mapbox API • Hackathon</p>
+          <div class="project-links">
+            <a href="https://github.com/FahmidaA0/national-parks.git" target="_blank">Code</a>
+            <a href="https://planet-over-profit.vercel.app/" target="_blank">Live</a>
+          </div>
+        </div>
 
-            <!-- Solo C++ Game -->
-            <article id="hangman-cpp" class="project">
-                <h3>Hugman (C++)</h3> 
-                <p>Built in VS Code with file I/O, random word selection, error handling, and hint logic to deliver a polished command-line experience.</p>
-                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_blank" rel="noopener noreferrer">View Code</a>
-                <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_blank">Run Demo</a>
-            </article>
-            </div>
-        </section>
+        <div class="project-card">
+          <h3 class="project-title">Hangman (C++)</h3>
+          <p class="project-desc">
+            Command-line word game with file I/O, random selection, error handling, and hint system.
+          </p>
+          <p class="project-tech">C++ • File I/O • CLI</p>
+          <div class="project-links">
+            <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_blank">Code</a>
+            <a href="https://github.com/MariamDobie/hangman-cpp.git" target="_blank">Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!--Contact Section-->
-        <section id="contact">
-            <div class="contact-container">
-            <h1 class="contact-title"> Get in Touch</h1>
-            <form class="contact-form">
-                <!--Name Field-->
-                <div class="input-group">
-                    <span class="icon">👤</span>
-                    <input type="text" placeholder="Your Name"/>
-                </div>
-                <!--Email Field -->
-                <div class="input-group">
-                    <span class="icon">✉️</span>
-                    <input type="text" placeholder="Your Email"/>
-                </div>
-                <!--Message Field-->
-                <div class="input-group">
-                    <textarea placeholder="Your Message"></textarea>
-                </div>
-                <!--Submit Button-->
-                <button type="sumbit" class="btn-send"> <img src="icons/submit.png" alt="submit icon"> Send Message </button>
-            </form>
+  <!-- EXPERIENCE SECTION  -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Work Experience</h2>
 
-            <!--Socials sub-section-->
-                <div class="social-connect">
-                    <h3 class="social-title"> Connect With Me</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mariamdobie" title="Linkedin" target="_blank" rel="noopener noreferrer"> 
-                            <img class="linkedin-icon" src="icons/LinkedIn2.png" alt="Linkedin icon">
-                        </a>
-                        <a href="https://github.com/MariamDobie" title="Github" target="_blank" rel="noopener noreferrer">
-                            <img class="github-icon" src="icons/github2.png" alt="Github icon">
-                        </a>
-                        <a href="mailto:mariamdobie@gmail.com">
-                            <img class="mail-icon" src="icons/envelope.png" alt="Email icon">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        Copyright © 2025 Mariam Dobie. All rights reserved.
-    </footer>
+      <!-- Role Number#1-->
+      <div class="experience-card">
+        <div class="exp-header">
+          <div class="exp-title-group">
+            <h3 class="exp-role">Data Engineer Intern</h3>
+            <p class="exp-company">CVS Health Corporation</p>
+          </div>
+          <span class="exp-date">January 2026</span>
+        </div>
+        <ul class="exp-description">
+          <li>Built a centralized health dashboard providing real-time visibility into batch pipelines (Airflow, Control-M, Tidal).</li>
+          <li>Used Python, Flask, HTML/CSS, and JavaScript to integrate RESTful APIs and create dynamic status updates.</li>
+          <li>Implemented AI-driven analytics using Vertex AI and Anthropic to predict system bottlenecks and risks.</li>
+        </ul>
+      </div>
+
+      <!-- Role Number#2 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <div class="exp-title-group">
+            <h3 class="exp-role">Cyber Security Intern</h3>
+            <p class="exp-company">SVAM International, Inc</p>
+          </div>
+          <span class="exp-date">Jul 2023 – Aug 2023</span>
+        </div>
+        <ul class="exp-description">
+          <li>Assisted in evaluating client systems to identify vulnerabilities in their frameworks and recommended appropriate measures.</li>
+          <li>Participated in team meetings and discussions on industry developments, contributing insights, and understanding cybersecurity challenges.</li>
+          <li>Improved communication, adaptability, and problem-solving skills through collaborative projects.</li>
+        </ul>
+      </div>
+      
+      <!-- Role Number#3 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <div class="exp-title-group">
+            <h3 class="exp-role">Branding and Content Marketing Intern</h3>
+            <p class="exp-company">The Holistic Time Coach, Inc</p>
+          </div>
+          <span class="exp-date">Jul 2022 – Aug 2022</span>
+        </div>
+        <ul class="exp-description">
+          <li>Assisted with company advertising, building social media campaigns, and preparing materials and presentations.</li>
+          <li>Created and curated content aligned with the brand's voice, writing, and revising weekly articles focused on time management and mindfulness.</li>
+          <li>Strengthened time management, communication, and problem-solving skills through daily assignments.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-layout">
+        <!-- Left: Contact Form - with working Formspree Form -->
+        <form class="contact-form" action="https://formspree.io/f/mvzdaqlr" method="POST">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Email address" required />
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+          <!-- Spam prevention -->
+          <input type="text" name="_gotcha" style="display:none" />
+          <button type="submit" class="btn-primary w-full justify-center">Send Message</button>
+        </form>
+
+        <!-- Right: Social & email panel -->
+        <div class="contact-side-card">
+          <h3 class="side-title">Connect directly</h3>
+          <div class="side-email-block">
+            <span class="email-icon">✉️</span>
+            <a href="mailto:mariamdobie@gmail.com" class="contact-email">mariamdobie@gmail.com</a>
+          </div>
+          <div class="social-links-side">
+            <a href="https://www.linkedin.com/in/mariamdobie" target="_blank" class="social-icon-link">
+              <img src="icons/LinkedIn2.png" alt="LinkedIn" class="social-icon">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/MariamDobie" target="_blank" class="social-icon-link">
+              <img src="icons/github2.png" alt="GitHub" class="social-icon">
+              <span>GitHub</span>
+            </a>
+          </div>
+          <p class="side-note">Open for opportunities & collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2026 Mariam Dobie
+  </footer>
+
+  <!-- simple contact form handler & Alert -->
+  <script>
+    (function() {
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const name = document.getElementById('contactName')?.value.trim();
+          const email = document.getElementById('contactEmail')?.value.trim();
+          const message = document.getElementById('contactMsg')?.value.trim();
+          if (!name || !email || !message) {
+            alert('Please fill out all fields.');
+            return;
+          }
+          if (!email.includes('@') || !email.includes('.')) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+          alert(`Your message has been sent, and will be replied to shortly,`);
+          form.reset();
+        });
+      }
+
+      // smooth scroll & active highlight (enhances navigation)
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      function updateActiveLink() {
+        let current = '';
+        const scrollPos = window.scrollY + 100;
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active-nav-link');
+          const href = link.getAttribute('href').substring(1);
+          if (href === current) {
+            link.classList.add('active-nav-link');
+          }
+        });
+      }
+      window.addEventListener('scroll', updateActiveLink);
+      updateActiveLink();
+    })();
+  </script>
 </body>
 </html>
